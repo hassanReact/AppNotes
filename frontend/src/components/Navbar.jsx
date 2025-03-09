@@ -65,7 +65,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
   const onLogout = async () => {
     try {
       dispatch(signoutStart())
-      const res = await axios.get("http://localhost:3000/api/auth/signout", {
+      const res = await axios.get(`${process.env.BECKEND_Base_URL}/api/auth/signout`, {
         withCredentials: true,
       })
       if (res.data.success === false) {

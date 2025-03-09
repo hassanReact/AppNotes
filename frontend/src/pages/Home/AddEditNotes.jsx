@@ -18,7 +18,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/note/edit/" + noteId,
+        `${process.env.BECKEND_Base_URL}/api/note/edit/` + noteId,
         { title, content, tags },
         { withCredentials: true }
       )
@@ -46,7 +46,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
     
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/note/add",
+        `${process.env.BECKEND_Base_URL}/api/note/add`,
         { title, content, tags },
         { withCredentials: true }
       )
