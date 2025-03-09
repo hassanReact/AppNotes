@@ -9,7 +9,7 @@ dotenv.config()
 const connect = mongoose.connect(process.env.MONGO_URI)
 
 if(connect){
-   console.log("MongoDb Connected")
+   console.log("MongoDb Connect")
 }
 
 const app = express()
